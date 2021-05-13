@@ -103,10 +103,8 @@ const icons = [
         family: 'fas'
     }
 ];
+
 const cardContainer = document.querySelector(".card_container");
-
-
-
 
 /*
 Milestone 2 Coloriamo le icone per tipo
@@ -121,8 +119,6 @@ icons.forEach((icon) => {
         icon.colorType = "#800080";
     }
 })
-
-console.log(icons);
 
 icons.forEach((icon) => {
     cardContainer.insertAdjacentHTML("beforeend",
@@ -148,10 +144,6 @@ icons.forEach((icon) => {
     }
 })
 
-console.log(animalIcons);
-console.log(vegetableIcons);
-console.log(userIcons);
-
 
 function test() {
     var elemento = document.getElementById("scelta_tipologia").value;
@@ -165,8 +157,6 @@ function test() {
     } else if (elemento === "user") {
         stampa = userIcons;
     }
-
-    console.log(stampa);
 
     cardContainer.innerHTML = "";
     stampa.forEach((icon) => {

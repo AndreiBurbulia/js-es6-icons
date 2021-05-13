@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Icon Js</title>
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet">
+
     <!-- Font Awensome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
@@ -24,9 +28,9 @@
 
         <div class="selection">
             <span>filtra per tipo</span>
-            <form action="">
+            <form action="scelta">
 
-                <select name="scelta_tipologia" id="scelta_tipologia">
+                <select onchange="test()" name="scelta_tipologia" id="scelta_tipologia">
                     <option value="all">All</option>
                     <option value="animal">Animals</option>
                     <option value="vegetable">Vegetable</option>

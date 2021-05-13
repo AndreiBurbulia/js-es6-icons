@@ -114,16 +114,16 @@ Milestone 2 Coloriamo le icone per tipo
 icons.forEach((icon) => {
 
     if (icon.type === "animal") {
-        icon.colorType = "blue";
+        icon.colorType = "#0000FF";
     } else if (icon.type === "vegetable") {
-        icon.colorType = "yellow";
+        icon.colorType = "#FFA500";
     } else if (icon.type === "user") {
-        icon.colorType = "purple";
+        icon.colorType = "#800080";
     }
 })
 
 console.log(icons);
-/*
+
 icons.forEach((icon) => {
     cardContainer.insertAdjacentHTML("beforeend",
         `   <div class="card">
@@ -131,10 +131,11 @@ icons.forEach((icon) => {
             <span>${icon.name}</span>
         </div>`)
 })
-*/
+
 /*
 Milestone 3 Creiamo una select con i tipi di icone e usiamola per filtrare le icone
 */
+
 const animalIcons = [], vegetableIcons = [], userIcons = [];
 
 icons.forEach((icon) => {
@@ -151,26 +152,23 @@ console.log(animalIcons);
 console.log(vegetableIcons);
 console.log(userIcons);
 
-/*
+
 function test() {
     var elemento = document.getElementById("scelta_tipologia").value;
     let stampa = [];
     if (elemento === "all") {
-        alert("all selezionato")
         stampa = icons;
     } else if (elemento === "animal") {
-        alert("animal selezionato")
         stampa = animalIcons;
     } else if (elemento === "vegetable") {
-        alert("vegetable selezionato")
         stampa = vegetableIcons;
     } else if (elemento === "user") {
-        alert("user selezionato")
         stampa = userIcons;
     }
 
-    alert("selezione fatta")
     console.log(stampa);
+
+    cardContainer.innerHTML = "";
     stampa.forEach((icon) => {
         cardContainer.insertAdjacentHTML("beforeend",
             `   <div class="card">
@@ -180,33 +178,4 @@ function test() {
     })
 
 }
-*/
-
-const selectValue = document.getElementById("scelta_tipologia");
-
-selectValue.addEventListener("change", () => {
-    const valore = selectValue.value;
-    console.log(valore);
-
-    let stampa = [];
-    if (valore === "all") {
-        stampa = icons;
-    } else if (valore === "animal") {
-        stampa = animalIcons;
-    } else if (valore === "vegetable") {
-        stampa = vegetableIcons;
-    } else if (valore === "user") {
-        stampa = userIcons;
-    }
-    console.log(stampa);
-    stampa.forEach((icon) => {
-        cardContainer.insertAdjacentHTML("beforeend",
-            `   <div class="card">
-            <i class="${icon.family} ${icon.prefix}${icon.name}" style = "color: ${icon.colorType}"></i>
-            <span>${icon.name}</span>
-        </div>`)
-    })
-
-
-})
 

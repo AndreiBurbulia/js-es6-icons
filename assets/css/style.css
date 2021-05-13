@@ -2,6 +2,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'PT Sans Caption', sans-serif;
+    font-weight: bold;
+}
+body{
+    background-color: lightgray;
 }
 
 header{
@@ -10,27 +15,37 @@ header{
     font-size: 30px;
     display: flex;
     align-items: flex-end;
+    background-color: white;
+}
+header h1{
+    color: #29B1DD;
 }
 
 .selection{
     height: 80px;
-    background-color: lightblue;
+    background-color: #29B1DD;
     display: flex;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
 }
+.selection span{
+    color: white;
+    font-size: 1.5rem;
+}
 
 .selection select{
     margin-left: 1rem;
     width: 150px;
+    height: 25px;
 }
 
 .card_container {
     padding: 1rem;
-    background-color: lightgray;
+    //background-color: lightgray;
     display: flex;
     flex-wrap: wrap;
+    height: 100%;
 }
 
 .card_container .card {
